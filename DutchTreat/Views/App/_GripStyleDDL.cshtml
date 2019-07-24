@@ -1,0 +1,6 @@
+﻿@model IEnumerable<GripStyle>
+
+    @foreach (var item in Model)
+    {
+        <option value="@item.Id" name="@item.Name">@item.Name</option>
+    }

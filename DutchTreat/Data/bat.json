@@ -1,0 +1,35 @@
+﻿[
+  {
+    "Id": 1,
+    "Category": "Bat",
+    "Size": "Normal",
+    "Price": "$$$",
+    "Title": "All around Bat",
+    "BatDescription": "Great for beginners and experts",
+    "BatId": "1",
+    "BatType": "average",
+    "BatPrice": "50.00"
+  },
+  {
+    "Id": 2,
+    "Category": "Bat",
+    "Size": "Normal",
+    "Price": "$",
+    "Title": "Beginner Bat",
+    "BatDescription": "Great for beginners",
+    "BatId": "2",
+    "BatType": "low",
+    "BatPrice": "10.00"
+  },
+  {
+    "Id": 3,
+    "Category": "Bat",
+    "Size": "Normal",
+    "Price": "$$$$$",
+    "Title": "Master Bat",
+    "BatDescription": "Great for experts",
+    "BatId": "3",
+    "BatType": "Golden",
+    "BatPrice": "100000.00"
+  }
+]

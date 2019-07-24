@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Player>
+<div>
+    <div class="row">
+        <div class="col-md-10">
+            <button type="button" class="btn btn-primary" id="newPlayerBtn">New Player</button>
+        </div>
+        <div id="entryForm" class="col-md-10" hidden>
+            @{Html.RenderPartial("~/Views/App/EntryForm.cshtml");}
+        </div>
+       
+
+        <h2 class="mt-5 col-md-10 offset-md-1 text-center">Exsilio Players</h2>
+
+        @* will display list of players *@
+        <div class="list-group col-md-10 offset-md-1">
+            
+            @foreach (var p in Model)
+            {
+                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">@(p.Name)</h5>
+                        <small>Entry Date: @(p.Date)</small>
+                    </div>
+                    <ul>
+                        <li class="mb-1">AKA: "@(p.NickName)"</li>
+                        @if (p.GripStyle != null || p.SkillLevel != null)
+                        {
+                            <li class="mb-1">Grip style: @(p.GripStyle.Name)</li>
+                            <li class="mb-1">Skill level: @(p.SkillLevel.Name)</li>
+                        }
+                        else
+                        {
+                            <li class="mb-1">Grip style: *UNKNOWN*</li>
+                            <li class="mb-1">Skill Level: *UNKNOWN*</li>
+                        }
+                    </ul>
+                </a>
+            }
+        </div>
+    </div>
+
+    <ol id="playerList"></ol>
+</div>
